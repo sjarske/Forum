@@ -56,7 +56,7 @@ namespace Forum.Controllers
             if (_userLogic.Login(user))
             {
                 var getUser = _userLogic.GetUser(user);
-                InitUser(user);
+                InitUser(getUser);
                 return RedirectToAction("Index", "Home");
             }
 
